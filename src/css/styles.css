@@ -69,11 +69,13 @@
 /* hero */
 
 .hero {
-  padding-top: 90px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   background-image: url(../img/hero/bg-1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   max-width: 430px;
   margin: 0 auto;
 }
@@ -93,44 +95,31 @@
 
   color: #fff;
   font-family: 'Cormorant Infant';
-  font-size: 92px;
+  font-size: 67px;
   font-style: normal;
   font-weight: 400;
-  line-height: 75%;
-  letter-spacing: -8.492px;
+  line-height: 80%;
+  letter-spacing: -5.36px;
   text-transform: uppercase;
 
-  max-width: 330px;
+  max-width: 315px;
 
   margin-bottom: 410px;
 }
 
-.hero .title .first-letter {
-  color: #fff;
-  font-family: Kindentosca;
-  font-size: 94.36px;
-  line-height: 46%;
-  padding-right: 10px;
-  text-transform: uppercase;
-}
-
-.hero .title .accent {
+.hero .title span {
   color: #ffd967;
-  font-family: 'Cormorant Infant';
-  font-size: 94.36px;
-  letter-spacing: -8.492px;
-  text-transform: uppercase;
 }
 
 .hero .desc {
-  color: #090909;
+  color: #fff;
   text-align: center;
   font-family: 'Helvetica Neue';
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 110%; /* 22px */
-  letter-spacing: -0.4px;
+  line-height: 110%; /* 17.6px */
+  letter-spacing: -0.32px;
   text-transform: uppercase;
 
   margin-bottom: 12px;
@@ -150,8 +139,8 @@
 
   padding: 25px;
   border-radius: 10px;
-  background: linear-gradient(90deg, #83c0ff 0%, #007cff 100%);
-  box-shadow: 2px 4px 0px 0px #007cff;
+  background: linear-gradient(90deg, #7b9eff 0%, #2c33c9 100%);
+  box-shadow: 2px 4px 0px 0px #2c33c9;
 
   border: inherit;
   max-width: 320px;
@@ -218,7 +207,7 @@
   justify-content: center;
   gap: 20px;
 
-  margin-bottom: 55px;
+  margin-bottom: 40px;
 }
 
 .bonus .list-item {
@@ -241,7 +230,7 @@
 }
 
 .timer-subtitle {
-  margin-top: -10px;
+  margin-top: -8px;
 
   color: #090909;
   text-align: center;
@@ -265,6 +254,13 @@
 
   margin-bottom: 42px;
 
+  border-radius: 15.075px;
+  background: #e6f2ff;
+
+  padding: 16px;
+}
+
+.timer2 {
   border-radius: 15.075px;
   background: #e6f2ff;
 
@@ -326,7 +322,7 @@
 
 .about-course {
   padding-top: 60px;
-  padding-bottom: 380px;
+  padding-bottom: 60px;
 
   background-image: url(../img/about-course/bg-1x.jpg);
   background-repeat: no-repeat;
@@ -440,73 +436,22 @@
 .program-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   max-width: 320px;
 
   margin-bottom: 60px;
 }
 
-.program-item-svg {
+.program-list .list-item {
   display: flex;
+  gap: 14px;
   align-items: center;
-  width: 25px;
-  height: 25px;
-
-  flex-shrink: 0;
-  background-image: url('../img/question-arrow.svg');
-  background-size: 20px 20px;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  transform: rotate(0deg);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.program-item.active .program-item-svg {
-  transform: rotate(45deg);
-}
-
-.program-list .program-item .program-answer-container {
-  display: grid;
-  grid-template-rows: 0fr;
-  overflow: hidden;
-  transition: grid-template-rows 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.program-wrapper {
-  min-height: 0;
-}
-
-.program-list .program-item.open .program-answer-container {
-  grid-template-rows: 1fr;
-}
-
-/*  */
-
-.program-item {
-  cursor: pointer;
-}
-
-.program-title-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
   padding: 20px 16px;
   border-radius: 5.025px;
   background: #fff0c2;
 }
 
-.program-title-container .title-box {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  max-width: 246px;
-}
-
-.program-title-container .item-number {
+.program-list .item-number {
   color: #090909;
   font-family: 'Helvetica Neue';
   font-size: 14px;
@@ -516,7 +461,7 @@
   letter-spacing: -0.42px;
 }
 
-.program-item-title {
+.program-list .item-text {
   color: #090909;
   font-family: 'Helvetica Neue';
   font-size: 16px;
@@ -524,31 +469,8 @@
   font-weight: 500;
   line-height: 115%; /* 18.4px */
   letter-spacing: -0.32px;
-  text-transform: uppercase;
 
-  max-width: 201px;
-}
-
-.answer-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  list-style: square;
-
-  padding-top: 20px;
-  padding-left: 46px;
-  padding-bottom: 20px;
-}
-
-.program-answer {
-  color: #090909;
-  font-family: 'Helvetica Neue';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 115%; /* 18.4px */
-  letter-spacing: -0.48px;
+  max-width: 242px;
 }
 
 /* access */
